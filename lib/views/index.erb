@@ -1,0 +1,33 @@
+<hml>
+  <head>
+    <title>The Gossip Project</title>
+
+
+  </head>
+    <body>
+    <h1>Bienvenue sur The Gossip Project!</h1>
+  <p>Ajoute ton gossip via ce formulaire :</p>
+  <a href="/gossips/new/">Nouveau gosssip</a>
+
+  <h3>Voici la liste de tous les potins :</h3>
+  <ul>
+  <% gossips.each_with_index do |gossip, index| %>
+    <li>
+      <h2>Potin n° <%= index + 1 %></h2>
+      <p><%= gossip.content %></p>
+      <p>Par <%= gossip.author %></p>
+      <a href="/gossips/<%= index + 1 %>/">Aller à la page du potin</a>
+    </li>
+  <% end %>
+  </ul>
+    </body>
+</hml>
+
+<style>
+			body{
+				color: black;
+        background-color : #4CA1AF;
+        line
+        
+			}
+		</style>
